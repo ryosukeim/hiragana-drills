@@ -113,7 +113,9 @@ export class PracticeScreen {
 
     // Create img element for vocabulary image
     const img = document.createElement('img');
-    img.src = `/images/${word.imageAsset}`;
+    // Explicitly handle GitHub Pages path in production
+    const imagePath = import.meta.env.PROD ? '/hiragana-drills/images/' : '/images/';
+    img.src = `${imagePath}${word.imageAsset}`;
     img.alt = word.english;
     img.style.width = '250px';
     img.style.height = '250px';
