@@ -1,0 +1,28 @@
+import fs from 'fs';
+import path from 'path';
+
+const outputDir = './public';
+const iconName = 'app-icon.svg';
+
+const svgContent = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Full bleed deep purple background -->
+  <rect width="512" height="512" fill="#1a0b2e"/>
+  
+  <!-- Stars -->
+  <circle cx="100" cy="100" r="10" fill="#FFD700" opacity="0.8"/>
+  <circle cx="400" cy="50" r="8" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="450" cy="400" r="12" fill="#FFD700" opacity="0.7"/>
+  <circle cx="50" cy="450" r="8" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="250" cy="50" r="5" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Rocket Emoji centered -->
+  <text x="50%" y="55%" font-size="350" text-anchor="middle" dominant-baseline="middle">🚀</text>
+  
+  <!-- Hiragana 'あ' overlay -->
+  <text x="50%" y="65%" font-size="150" fill="white" font-weight="bold" stroke="#1a0b2e" stroke-width="10" text-anchor="middle" dominant-baseline="middle">あ</text>
+</svg>
+`;
+
+fs.writeFileSync(path.join(outputDir, iconName), svgContent.trim());
+console.log(`Generated ${iconName}`);
