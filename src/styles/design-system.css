@@ -1,0 +1,288 @@
+/* ========================================
+   DESIGN SYSTEM - KANA SPACE ADVENTURE
+   ======================================== */
+
+/* === COLOR PALETTE === */
+:root {
+  /* Space Theme - Dark cosmic background */
+  --color-space-dark: #0a0415;
+  --color-space-deep: #1a0b2e;
+  --color-space-purple: #2d1b4e;
+  --color-space-nebula: #4a2c6d;
+  
+  /* Vibrant accents */
+  --color-star-yellow: #ffd93d;
+  --color-star-orange: #ffb347;
+  --color-cosmic-blue: #6bcfff;
+  --color-cosmic-cyan: #4dd9ff;
+  --color-alien-green: #6fff6f;
+  --color-rocket-red: #ff6b9d;
+  --color-planet-pink: #ff88dc;
+  
+  /* Gradients */
+  --gradient-space: linear-gradient(135deg, var(--color-space-deep) 0%, var(--color-space-purple) 100%);
+  --gradient-success: linear-gradient(135deg, #6fff6f 0%, #4dd9ff 100%);
+  --gradient-card: linear-gradient(135deg, rgba(77, 217, 255, 0.15) 0%, rgba(255, 136, 220, 0.15) 100%);
+  --gradient-button: linear-gradient(135deg, var(--color-cosmic-cyan) 0%, var(--color-planet-pink) 100%);
+  --gradient-star: radial-gradient(circle, var(--color-star-yellow) 0%, var(--color-star-orange) 100%);
+  
+  /* Semantic colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.8);
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-bg-card: rgba(42, 27, 78, 0.6);
+  --color-bg-overlay: rgba(10, 4, 21, 0.9);
+  --color-border: rgba(107, 207, 255, 0.3);
+  
+  /* Success/Encouragement */
+  --color-success: var(--color-alien-green);
+  --color-warning: var(--color-star-orange);
+  --color-info: var(--color-cosmic-blue);
+  
+  /* === TYPOGRAPHY === */
+  --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-japanese: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  
+  /* Font sizes - large for kids */
+  --font-size-xs: 0.875rem;    /* 14px */
+  --font-size-sm: 1rem;        /* 16px */
+  --font-size-md: 1.25rem;     /* 20px */
+  --font-size-lg: 1.5rem;      /* 24px */
+  --font-size-xl: 2rem;        /* 32px */
+  --font-size-2xl: 2.5rem;     /* 40px */
+  --font-size-3xl: 3rem;       /* 48px */
+  --font-size-huge: 4rem;      /* 64px */
+  --font-size-kana: 6rem;      /* 96px - large kana display */
+  
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* === SPACING === */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  
+  /* === SIZING === */
+  --size-touch-min: 44px;        /* Minimum touch target */
+  --size-button-height: 56px;    /* Large button height */
+  --size-icon-sm: 24px;
+  --size-icon-md: 32px;
+  --size-icon-lg: 48px;
+  --size-icon-xl: 64px;
+  
+  /* === BORDER RADIUS === */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* === SHADOWS === */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(107, 207, 255, 0.5);
+  --shadow-glow-pink: 0 0 20px rgba(255, 136, 220, 0.5);
+  
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+  
+  /* === Z-INDEX === */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-modal: 200;
+  --z-tooltip: 300;
+  --z-notification: 400;
+  
+  /* === ANIMATIONS === */
+  --animation-bounce: bounce 0.6s ease;
+  --animation-pulse: pulse 2s infinite;
+  --animation-wiggle: wiggle 0.5s ease;
+}
+
+/* === COMPONENT TOKENS === */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: var(--size-button-height);
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  background: var(--gradient-button);
+  border: none;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.btn:active {
+  transform: translateY(0px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background: var(--gradient-button);
+}
+
+.btn-success {
+  background: var(--gradient-success);
+  color: var(--color-space-dark);
+}
+
+.btn-secondary {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(10px);
+}
+
+.btn-large {
+  min-height: 72px;
+  padding: var(--space-lg) var(--space-2xl);
+  font-size: var(--font-size-xl);
+}
+
+.btn-icon {
+  width: var(--size-button-height);
+  height: var(--size-button-height);
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+/* Cards */
+.card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(20px);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-gradient {
+  background: var(--gradient-card);
+  backdrop-filter: blur(20px);
+}
+
+/* Text styles */
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-kana {
+  font-family: var(--font-japanese);
+  font-size: var(--font-size-kana);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+/* === ANIMATIONS === */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Utility animation classes */
+.animate-bounce { animation: var(--animation-bounce); }
+.animate-pulse { animation: var(--animation-pulse); }
+.animate-wiggle { animation: var(--animation-wiggle); }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-slide-up { animation: slideUp 0.4s ease; }
+.animate-fade-in { animation: fadeIn 0.3s ease; }
+
+/* === RESPONSIVE BREAKPOINTS === */
+/* Mobile-first approach */
+@media (min-width: 768px) {
+  :root {
+    --font-size-lg: 1.75rem;
+    --font-size-xl: 2.25rem;
+    --font-size-2xl: 3rem;
+    --font-size-kana: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size-lg: 2rem;
+    --font-size-xl: 2.5rem;
+    --font-size-kana: 10rem;
+  }
+}
