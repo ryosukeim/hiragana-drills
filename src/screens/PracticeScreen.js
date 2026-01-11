@@ -180,6 +180,15 @@ export class PracticeScreen {
     card.appendChild(audioButtons);
     card.appendChild(practiceButton);
 
+    // Next button (Skip)
+    const nextButton = document.createElement('button');
+    nextButton.className = 'btn btn-secondary mt-md';
+    nextButton.style.width = '100%';
+    nextButton.innerHTML = `<span data-i18n="practice_next">${i18n.t('practice_next') || 'Next →'}</span>`;
+    nextButton.onclick = () => this.nextWord();
+
+    card.appendChild(nextButton);
+
     container.innerHTML = '';
     container.appendChild(card);
 

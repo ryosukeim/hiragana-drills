@@ -101,7 +101,7 @@ export class StrokeCapture {
     // Draw a guide (for trace mode)
     drawGuide(kanaChar) {
         this.ctx.save();
-        this.ctx.font = '200px "Kiwi Maru", sans-serif';
+        this.ctx.font = '200px "Klee One", sans-serif';
         this.ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
         this.ctx.textAlign = 'center';
         this.ctx.textBaseline = 'middle';
