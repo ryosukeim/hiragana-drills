@@ -104,89 +104,73 @@ export class StrokeCapture {
     drawGuide(kanaChar) {
         this.ctx.save();
 
-        let drawn = false;
+        // 1. Draw the character using Klee One (User Requirement)
+        this.ctx.font = '200px "Klee One", sans-serif';
+        this.ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+        this.ctx.textAlign = 'center';
+        this.ctx.textBaseline = 'middle';
 
+        const rect = this.canvas.getBoundingClientRect();
+        // Use logic coordinates since context is scaled
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        this.ctx.fillText(kanaChar, centerX, centerY);
+
+        // 2. Overlay numbers using SVG data (if available)
         try {
-            // Find SVG data for this char
             const charCode = kanaChar.charCodeAt(0);
-
-            // Safety check for data
             if (Array.isArray(allHiragana)) {
                 const charData = allHiragana.find(c => c.charCode === charCode);
 
-                if (charData) {
-                    // Use SVG data
-                    // SVG coordinates are typically 1024x1024 based on the source
-                    const scale = this.canvas.width / 1024;
+                if (charData && charData.medians) {
+                    // Map 1024 SVG units to 200px Font space
+                    // We assume the font's 200px roughly corresponds to the 1024px EM square of the SVG
+                    // But fonts usually have padding. 
+                    // Let's approximate: 200px font usually fills about 0.8-0.9 of the em box visually?
+                    // Standard scaling: targetSize / sourceSize
+                    const fontSize = 200;
+                    const svgSize = 1024;
+                    const scale = fontSize / svgSize;
 
-                    // Draw strokes
-                    this.ctx.lineWidth = 10;
-                    this.ctx.lineCap = 'round';
-                    this.ctx.lineJoin = 'round';
-                    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
-
-                    if (charData.strokes) {
-                        charData.strokes.forEach(stroke => {
-                            const path = new Path2D(stroke.value);
-                            this.ctx.save();
-                            this.ctx.scale(scale, scale);
-                            this.ctx.stroke(path);
-                            this.ctx.restore();
-                        });
-                    }
+                    // We need to translate SVG (0,0 is top-left) to Canvas (Center is center)
+                    // SVG Center is (512, 512).
 
                     // Draw numbers
                     this.ctx.font = '24px "Fredoka", sans-serif';
-                    this.ctx.fillStyle = 'rgba(255, 200, 100, 0.9)';
                     this.ctx.textAlign = 'center';
                     this.ctx.textBaseline = 'middle';
 
-                    if (charData.medians) {
-                        charData.medians.forEach((median, index) => {
-                            if (median.value && median.value.length > 0) {
-                                const startPoint = median.value[0];
-                                const x = startPoint[0] * scale;
-                                const y = startPoint[1] * scale;
+                    charData.medians.forEach((median, index) => {
+                        if (median.value && median.value.length > 0) {
+                            const startPoint = median.value[0];
+                            // transform from SVG space to Canvas space relative to center
+                            // x' = (x - 512) * scale + centerX
+                            // y' = (y - 512) * scale + centerY
+                            // Note: We might need a slight vertical adjust because textBaseline 'middle' isn't exact center of em box for all fonts, but it's close.
 
-                                // Draw circle background for number
-                                this.ctx.beginPath();
-                                this.ctx.arc(x, y, 16, 0, Math.PI * 2);
-                                this.ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-                                this.ctx.fill();
+                            // Adjusting scale slightly up because Klee One is a bit wide? 
+                            // Let's stick to 1.0 relation first.
 
-                                // Draw number
-                                this.ctx.fillStyle = '#1a0b2e'; // Dark text
-                                this.ctx.fillText((index + 1).toString(), x, y + 2);
-                            }
-                        });
-                    }
-                    drawn = true;
+                            const x = (startPoint[0] - 512) * scale + centerX;
+                            // Adding a small vertical offset (e.g. +10) often helps align with visual center of font
+                            const y = (startPoint[1] - 512) * scale + centerY + 10;
+
+                            // Draw circle background for number
+                            this.ctx.beginPath();
+                            this.ctx.arc(x, y, 14, 0, Math.PI * 2);
+                            this.ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                            this.ctx.fill();
+
+                            // Draw number
+                            this.ctx.fillStyle = '#1a0b2e';
+                            this.ctx.fillText((index + 1).toString(), x, y + 1);
+                        }
+                    });
                 }
             }
         } catch (e) {
-            console.error('Error drawing SVG guide:', e);
-            drawn = false;
-        }
-
-        if (!drawn) {
-            // Fallback to "Klee One" (Textbook style)
-            // Use local logical font size, not scaled pixel size here because transform isn't reset?
-            // Wait, we are in a saved state. ctx.save() at top.
-            // But setupCanvas scales the context by devicePixelRatio.
-            // So logical coordinates work.
-
-            this.ctx.font = '200px "Klee One", sans-serif';
-            this.ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
-            this.ctx.textAlign = 'center';
-            this.ctx.textBaseline = 'middle';
-
-            // Center in the *logical* canvas space
-            // this.canvas.width is the PIXEL width (logical * ratio)
-            // We need logical width/height.
-            const rect = this.canvas.getBoundingClientRect();
-            // rect.width is logical width.
-
-            this.ctx.fillText(kanaChar, rect.width / 2, rect.height / 2);
+            console.error('Error drawing numbers:', e);
         }
 
         this.ctx.restore();
