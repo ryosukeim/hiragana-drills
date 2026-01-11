@@ -104,60 +104,88 @@ export class StrokeCapture {
     drawGuide(kanaChar) {
         this.ctx.save();
 
-        // Find SVG data for this char
-        const charCode = kanaChar.charCodeAt(0);
-        const charData = allHiragana.find(c => c.charCode === charCode);
+        let drawn = false;
 
-        if (charData) {
-            // Use SVG data
-            const scale = this.canvas.width / 1024; // Assuming 1024 coordinate system
+        try {
+            // Find SVG data for this char
+            const charCode = kanaChar.charCodeAt(0);
 
-            // Draw strokes
-            this.ctx.lineWidth = 10;
-            this.ctx.lineCap = 'round';
-            this.ctx.lineJoin = 'round';
-            this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+            // Safety check for data
+            if (Array.isArray(allHiragana)) {
+                const charData = allHiragana.find(c => c.charCode === charCode);
 
-            charData.strokes.forEach(stroke => {
-                const path = new Path2D(stroke.value);
-                this.ctx.save();
-                this.ctx.scale(scale, scale);
-                this.ctx.stroke(path);
-                this.ctx.restore();
-            });
+                if (charData) {
+                    // Use SVG data
+                    // SVG coordinates are typically 1024x1024 based on the source
+                    const scale = this.canvas.width / 1024;
 
-            // Draw numbers
-            this.ctx.font = '24px "Fredoka", sans-serif'; // Cute font for numbers
-            this.ctx.fillStyle = 'rgba(255, 200, 100, 0.9)'; // Orange-ish for visibility
-            this.ctx.textAlign = 'center';
-            this.ctx.textBaseline = 'middle';
+                    // Draw strokes
+                    this.ctx.lineWidth = 10;
+                    this.ctx.lineCap = 'round';
+                    this.ctx.lineJoin = 'round';
+                    this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
 
-            charData.medians.forEach((median, index) => {
-                if (median.value && median.value.length > 0) {
-                    const startPoint = median.value[0];
-                    const x = startPoint[0] * scale;
-                    const y = startPoint[1] * scale;
+                    if (charData.strokes) {
+                        charData.strokes.forEach(stroke => {
+                            const path = new Path2D(stroke.value);
+                            this.ctx.save();
+                            this.ctx.scale(scale, scale);
+                            this.ctx.stroke(path);
+                            this.ctx.restore();
+                        });
+                    }
 
-                    // Draw circle background for number
-                    this.ctx.beginPath();
-                    this.ctx.arc(x, y, 16, 0, Math.PI * 2);
-                    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-                    this.ctx.fill();
+                    // Draw numbers
+                    this.ctx.font = '24px "Fredoka", sans-serif';
+                    this.ctx.fillStyle = 'rgba(255, 200, 100, 0.9)';
+                    this.ctx.textAlign = 'center';
+                    this.ctx.textBaseline = 'middle';
 
-                    // Draw number
-                    this.ctx.fillStyle = '#1a0b2e'; // Dark text
-                    this.ctx.fillText((index + 1).toString(), x, y + 2); // Slight adjustment
+                    if (charData.medians) {
+                        charData.medians.forEach((median, index) => {
+                            if (median.value && median.value.length > 0) {
+                                const startPoint = median.value[0];
+                                const x = startPoint[0] * scale;
+                                const y = startPoint[1] * scale;
+
+                                // Draw circle background for number
+                                this.ctx.beginPath();
+                                this.ctx.arc(x, y, 16, 0, Math.PI * 2);
+                                this.ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                                this.ctx.fill();
+
+                                // Draw number
+                                this.ctx.fillStyle = '#1a0b2e'; // Dark text
+                                this.ctx.fillText((index + 1).toString(), x, y + 2);
+                            }
+                        });
+                    }
+                    drawn = true;
                 }
-            });
+            }
+        } catch (e) {
+            console.error('Error drawing SVG guide:', e);
+            drawn = false;
+        }
 
-        } else {
-            // Fallback to font
+        if (!drawn) {
+            // Fallback to "Klee One" (Textbook style)
+            // Use local logical font size, not scaled pixel size here because transform isn't reset?
+            // Wait, we are in a saved state. ctx.save() at top.
+            // But setupCanvas scales the context by devicePixelRatio.
+            // So logical coordinates work.
+
             this.ctx.font = '200px "Klee One", sans-serif';
             this.ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
             this.ctx.textAlign = 'center';
             this.ctx.textBaseline = 'middle';
 
+            // Center in the *logical* canvas space
+            // this.canvas.width is the PIXEL width (logical * ratio)
+            // We need logical width/height.
             const rect = this.canvas.getBoundingClientRect();
+            // rect.width is logical width.
+
             this.ctx.fillText(kanaChar, rect.width / 2, rect.height / 2);
         }
 
