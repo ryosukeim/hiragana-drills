@@ -66,7 +66,7 @@ export const wordData = [
         romaji: 'kuma',
         hiragana: 'くま',
         katakana: 'クマ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'bear.svg',
         kanaFocus: ['く', 'ま', 'ク', 'マ']
     },
     {
@@ -77,7 +77,7 @@ export const wordData = [
         romaji: 'ushi',
         hiragana: 'うし',
         katakana: 'ウシ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'cow.svg',
         kanaFocus: ['う', 'し', 'ウ', 'シ']
     },
     {
@@ -88,7 +88,7 @@ export const wordData = [
         romaji: 'buta',
         hiragana: 'ぶた',
         katakana: 'ブタ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'pig.svg',
         kanaFocus: ['ぶ', 'た', 'ブ', 'タ']
     },
 
@@ -123,7 +123,7 @@ export const wordData = [
         romaji: 'mizu',
         hiragana: 'みず',
         katakana: 'ミズ',
-        imageAsset: 'placeholder.svg', // Revert to placeholder if original missing
+        imageAsset: 'water.svg', // Revert to placeholder if original missing
         kanaFocus: ['み', 'ず', 'ミ', 'ズ']
     },
     {
@@ -156,7 +156,7 @@ export const wordData = [
         romaji: 'tamago',
         hiragana: 'たまご',
         katakana: 'タマゴ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'egg.svg',
         kanaFocus: ['た', 'ま', 'ご', 'タ', 'マ', 'ゴ']
     },
     {
@@ -167,7 +167,7 @@ export const wordData = [
         romaji: 'yasai',
         hiragana: 'やさい',
         katakana: 'ヤサイ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'vegetable.svg',
         kanaFocus: ['や', 'さ', 'い', 'ヤ', 'サ', 'イ']
     },
 
@@ -180,7 +180,7 @@ export const wordData = [
         romaji: 'aka',
         hiragana: 'あか',
         katakana: 'アカ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'red.svg',
         kanaFocus: ['あ', 'か', 'ア', 'カ']
     },
     {
@@ -191,7 +191,7 @@ export const wordData = [
         romaji: 'ao',
         hiragana: 'あお',
         katakana: 'アオ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'blue.svg',
         kanaFocus: ['あ', 'お', 'ア', 'オ']
     },
     {
@@ -202,7 +202,7 @@ export const wordData = [
         romaji: 'shiro',
         hiragana: 'しろ',
         katakana: 'シロ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'white.svg',
         kanaFocus: ['し', 'ろ', 'シ', 'ロ']
     },
 
@@ -215,7 +215,7 @@ export const wordData = [
         romaji: 'ame',
         hiragana: 'あめ',
         katakana: 'アメ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'rain.svg',
         kanaFocus: ['あ', 'め', 'ア', 'メ']
     },
     {
@@ -226,7 +226,7 @@ export const wordData = [
         romaji: 'kawa',
         hiragana: 'かわ',
         katakana: 'カワ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'river.svg',
         kanaFocus: ['か', 'わ', 'カ', 'ワ']
     },
     {
@@ -237,7 +237,7 @@ export const wordData = [
         romaji: 'sora',
         hiragana: 'そら',
         katakana: 'ソラ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'sky.svg',
         kanaFocus: ['そ', 'ら', 'ソ', 'ラ']
     },
 
@@ -250,7 +250,7 @@ export const wordData = [
         romaji: 'te',
         hiragana: 'て',
         katakana: 'テ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'hand.svg',
         kanaFocus: ['て', 'テ']
     },
     {
@@ -261,7 +261,7 @@ export const wordData = [
         romaji: 'me',
         hiragana: 'め',
         katakana: 'メ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'eye.svg',
         kanaFocus: ['め', 'メ']
     },
     {
@@ -272,7 +272,7 @@ export const wordData = [
         romaji: 'mimi',
         hiragana: 'みみ',
         katakana: 'ミミ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'ear.svg',
         kanaFocus: ['み', 'ミ']
     },
 
@@ -285,7 +285,7 @@ export const wordData = [
         romaji: 'zou',
         hiragana: 'ぞう',
         katakana: 'ゾウ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'elephant.svg', // Missing realistic
         kanaFocus: ['ぞ', 'う', 'ゾ', 'ウ']
     },
     {
@@ -296,7 +296,7 @@ export const wordData = [
         romaji: 'saru',
         hiragana: 'さる',
         katakana: 'サル',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'monkey.svg', // Missing realistic
         kanaFocus: ['さ', 'る', 'サ', 'ル']
     },
     {
@@ -307,7 +307,7 @@ export const wordData = [
         romaji: 'pengin',
         hiragana: 'ペンギン',
         katakana: 'ペンギン',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'penguin.svg', // Missing realistic
         kanaFocus: ['ペ', 'ン', 'ギ', 'ン']
     },
     {
@@ -318,7 +318,7 @@ export const wordData = [
         romaji: 'iruka',
         hiragana: 'いるか',
         katakana: 'イルカ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'dolphin.svg', // Missing realistic
         kanaFocus: ['い', 'る', 'か', 'イ', 'ル', 'カ']
     },
     {
@@ -329,7 +329,7 @@ export const wordData = [
         romaji: 'chou',
         hiragana: 'ちょう',
         katakana: 'チョウ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'butterfly.svg', // Missing realistic
         kanaFocus: ['ち', 'ょ', 'う', 'チ', 'ョ', 'ウ']
     },
     {
@@ -340,7 +340,7 @@ export const wordData = [
         romaji: 'uma',
         hiragana: 'うま',
         katakana: 'ウマ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'horse.svg',
         kanaFocus: ['う', 'ま', 'ウ', 'マ']
     },
     {
@@ -351,7 +351,7 @@ export const wordData = [
         romaji: 'hitsuji',
         hiragana: 'ひつじ',
         katakana: 'ヒツジ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'sheep.svg',
         kanaFocus: ['ひ', 'つ', 'じ', 'ヒ', 'ツ', 'ジ']
     },
     {
@@ -362,7 +362,7 @@ export const wordData = [
         romaji: 'raion',
         hiragana: 'ライオン',
         katakana: 'ライオン',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'lion.svg',
         kanaFocus: ['ラ', 'イ', 'オ', 'ン']
     },
 
@@ -397,7 +397,7 @@ export const wordData = [
         romaji: 'banana',
         hiragana: 'バナナ',
         katakana: 'バナナ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'banana.svg', // Missing realistic
         kanaFocus: ['バ', 'ナ', 'ナ']
     },
     {
@@ -408,7 +408,7 @@ export const wordData = [
         romaji: 'orenji',
         hiragana: 'オレンジ',
         katakana: 'オレンジ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'orange.svg', // Missing realistic
         kanaFocus: ['オ', 'レ', 'ン', 'ジ']
     },
     {
@@ -419,7 +419,7 @@ export const wordData = [
         romaji: 'choko',
         hiragana: 'チョコ',
         katakana: 'チョコ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'chocolate.svg', // Missing realistic
         kanaFocus: ['チ', 'ョ', 'コ']
     },
 
@@ -432,7 +432,7 @@ export const wordData = [
         romaji: 'hon',
         hiragana: 'ほん',
         katakana: 'ホン',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'book.svg', // Missing realistic
         kanaFocus: ['ほ', 'ん', 'ホ', 'ン']
     },
     {
@@ -443,7 +443,7 @@ export const wordData = [
         romaji: 'kuruma',
         hiragana: 'くるま',
         katakana: 'クルマ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'car.svg', // Missing realistic
         kanaFocus: ['く', 'る', 'ま', 'ク', 'ル', 'マ']
     },
     {
@@ -454,7 +454,7 @@ export const wordData = [
         romaji: 'ie',
         hiragana: 'いえ',
         katakana: 'イエ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'house.svg', // Missing realistic
         kanaFocus: ['い', 'え', 'イ', 'エ']
     },
     {
@@ -465,7 +465,7 @@ export const wordData = [
         romaji: 'hana',
         hiragana: 'はな',
         katakana: 'ハナ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'flower.svg', // Missing realistic
         kanaFocus: ['は', 'な', 'ハ', 'ナ']
     },
     {
@@ -476,7 +476,7 @@ export const wordData = [
         romaji: 'kasa',
         hiragana: 'かさ',
         katakana: 'カサ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'umbrella.svg',
         kanaFocus: ['か', 'さ', 'カ', 'サ']
     },
     {
@@ -487,7 +487,7 @@ export const wordData = [
         romaji: 'kutsu',
         hiragana: 'くつ',
         katakana: 'クツ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'shoes.svg',
         kanaFocus: ['く', 'つ', 'ク', 'ツ']
     },
 
@@ -500,7 +500,7 @@ export const wordData = [
         romaji: 'taiyou',
         hiragana: 'たいよう',
         katakana: 'タイヨウ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'sun.svg',
         kanaFocus: ['た', 'い', 'よ', 'う', 'タ', 'イ', 'ヨ', 'ウ']
     },
     {
@@ -511,7 +511,7 @@ export const wordData = [
         romaji: 'tsuki',
         hiragana: 'つき',
         katakana: 'ツキ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'moon.svg',
         kanaFocus: ['つ', 'き', 'ツ', 'キ']
     },
     {
@@ -522,7 +522,7 @@ export const wordData = [
         romaji: 'yama',
         hiragana: 'やま',
         katakana: 'ヤマ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'mountain.svg',
         kanaFocus: ['や', 'ま', 'ヤ', 'マ']
     },
 
@@ -535,7 +535,7 @@ export const wordData = [
         romaji: 'ashi',
         hiragana: 'あし',
         katakana: 'アシ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'foot.svg',
         kanaFocus: ['あ', 'し', 'ア', 'シ']
     },
     {
@@ -546,7 +546,7 @@ export const wordData = [
         romaji: 'kuchi',
         hiragana: 'くち',
         katakana: 'クチ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'mouth.svg',
         kanaFocus: ['く', 'ち', 'ク', 'チ']
     },
 
@@ -559,7 +559,7 @@ export const wordData = [
         romaji: 'kirin',
         hiragana: 'きりん',
         katakana: 'キリン',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'giraffe.svg', // Missing realistic
         kanaFocus: ['き', 'り', 'ん', 'キ', 'リ', 'ン']
     },
     {
@@ -570,7 +570,7 @@ export const wordData = [
         romaji: 'wani',
         hiragana: 'わに',
         katakana: 'ワニ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'crocodile.svg', // Missing realistic
         kanaFocus: ['わ', 'に', 'ワ', 'ニ']
     },
     {
@@ -581,7 +581,7 @@ export const wordData = [
         romaji: 'hamusuta',
         hiragana: 'ハムスター',
         katakana: 'ハムスター',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'hamster.svg', // Missing realistic
         kanaFocus: ['ハ', 'ム', 'ス', 'タ', 'ー']
     },
     {
@@ -592,7 +592,7 @@ export const wordData = [
         romaji: 'kangaru',
         hiragana: 'カンガルー',
         katakana: 'カンガルー',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'kangaroo.svg', // Missing realistic
         kanaFocus: ['カ', 'ン', 'ガ', 'ル', 'ー']
     },
     {
@@ -603,7 +603,7 @@ export const wordData = [
         romaji: 'tora',
         hiragana: 'とら',
         katakana: 'トラ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'tiger.svg',
         kanaFocus: ['と', 'ら', 'ト', 'ラ']
     },
 
@@ -627,7 +627,7 @@ export const wordData = [
         romaji: 'hanbaga',
         hiragana: 'ハンバーガー',
         katakana: 'ハンバーガー',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'hamburger.svg', // Missing realistic
         kanaFocus: ['ハ', 'ン', 'バ', 'ー', 'ガ', 'ー']
     },
     {
@@ -638,7 +638,7 @@ export const wordData = [
         romaji: 'aisukuriimu',
         hiragana: 'アイスクリーム',
         katakana: 'アイスクリーム',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'ice_cream.svg', // Missing realistic
         kanaFocus: ['ア', 'イ', 'ス', 'ク', 'リ', 'ー', 'ム']
     },
 
@@ -651,7 +651,7 @@ export const wordData = [
         romaji: 'konpyuta',
         hiragana: 'コンピュータ',
         katakana: 'コンピュータ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'computer.svg', // Missing realistic
         kanaFocus: ['コ', 'ン', 'ピ', 'ュ', 'ー', 'タ']
     },
     {
@@ -662,7 +662,7 @@ export const wordData = [
         romaji: 'terebi',
         hiragana: 'テレビ',
         katakana: 'テレビ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'television.svg', // Missing realistic
         kanaFocus: ['テ', 'レ', 'ビ']
     },
     {
@@ -673,7 +673,7 @@ export const wordData = [
         romaji: 'kamera',
         hiragana: 'カメラ',
         katakana: 'カメラ',
-        imageAsset: 'placeholder.svg', // Missing realistic
+        imageAsset: 'camera.svg', // Missing realistic
         kanaFocus: ['カ', 'メ', 'ラ']
     },
     {
@@ -684,7 +684,7 @@ export const wordData = [
         romaji: 'isu',
         hiragana: 'いす',
         katakana: 'イス',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'chair.svg',
         kanaFocus: ['い', 'す', 'イ', 'ス']
     },
     {
@@ -695,7 +695,7 @@ export const wordData = [
         romaji: 'tsukue',
         hiragana: 'つくえ',
         katakana: 'ツクエ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'desk.svg',
         kanaFocus: ['つ', 'く', 'え', 'ツ', 'ク', 'エ']
     },
 
@@ -708,7 +708,7 @@ export const wordData = [
         romaji: 'hoshi',
         hiragana: 'ほし',
         katakana: 'ホシ',
-        imageAsset: 'placeholder.svg',
+        imageAsset: 'star.svg',
         kanaFocus: ['ほ', 'し', 'ホ', 'シ']
     },
 ];
