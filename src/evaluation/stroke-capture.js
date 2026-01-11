@@ -1,6 +1,8 @@
 // Stroke capture for canvas writing
 // Captures pointer events and converts to normalized stroke data
 
+import allHiragana from '../data/allHiragana.json';
+
 export class StrokeCapture {
     constructor(canvas) {
         this.canvas = canvas;
@@ -101,13 +103,64 @@ export class StrokeCapture {
     // Draw a guide (for trace mode)
     drawGuide(kanaChar) {
         this.ctx.save();
-        this.ctx.font = '200px "Klee One", sans-serif';
-        this.ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
-        this.ctx.textAlign = 'center';
-        this.ctx.textBaseline = 'middle';
 
-        const rect = this.canvas.getBoundingClientRect();
-        this.ctx.fillText(kanaChar, rect.width / 2, rect.height / 2);
+        // Find SVG data for this char
+        const charCode = kanaChar.charCodeAt(0);
+        const charData = allHiragana.find(c => c.charCode === charCode);
+
+        if (charData) {
+            // Use SVG data
+            const scale = this.canvas.width / 1024; // Assuming 1024 coordinate system
+
+            // Draw strokes
+            this.ctx.lineWidth = 10;
+            this.ctx.lineCap = 'round';
+            this.ctx.lineJoin = 'round';
+            this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+
+            charData.strokes.forEach(stroke => {
+                const path = new Path2D(stroke.value);
+                this.ctx.save();
+                this.ctx.scale(scale, scale);
+                this.ctx.stroke(path);
+                this.ctx.restore();
+            });
+
+            // Draw numbers
+            this.ctx.font = '24px "Fredoka", sans-serif'; // Cute font for numbers
+            this.ctx.fillStyle = 'rgba(255, 200, 100, 0.9)'; // Orange-ish for visibility
+            this.ctx.textAlign = 'center';
+            this.ctx.textBaseline = 'middle';
+
+            charData.medians.forEach((median, index) => {
+                if (median.value && median.value.length > 0) {
+                    const startPoint = median.value[0];
+                    const x = startPoint[0] * scale;
+                    const y = startPoint[1] * scale;
+
+                    // Draw circle background for number
+                    this.ctx.beginPath();
+                    this.ctx.arc(x, y, 16, 0, Math.PI * 2);
+                    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                    this.ctx.fill();
+
+                    // Draw number
+                    this.ctx.fillStyle = '#1a0b2e'; // Dark text
+                    this.ctx.fillText((index + 1).toString(), x, y + 2); // Slight adjustment
+                }
+            });
+
+        } else {
+            // Fallback to font
+            this.ctx.font = '200px "Klee One", sans-serif';
+            this.ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            this.ctx.textAlign = 'center';
+            this.ctx.textBaseline = 'middle';
+
+            const rect = this.canvas.getBoundingClientRect();
+            this.ctx.fillText(kanaChar, rect.width / 2, rect.height / 2);
+        }
+
         this.ctx.restore();
     }
 
