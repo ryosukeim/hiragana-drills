@@ -8,7 +8,7 @@
     "start_url": "./index.html",
     "icons": [
         {
-            "src": "icon-final-rocket.jpg",
+            "src": "icon-text-final.jpg",
             "sizes": "512x512",
             "type": "image/jpeg"
         }
