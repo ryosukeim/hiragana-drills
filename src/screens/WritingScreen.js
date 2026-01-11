@@ -65,7 +65,7 @@ export class WritingScreen {
 
     // Canvases Container
     const canvasesContainer = document.createElement('div');
-    canvasesContainer.className = 'flex flex-wrap justify-center gap-md mb-lg';
+    canvasesContainer.className = 'flex flex-wrap justify-center gap-md mb-lg multi-char-container';
     canvasesContainer.id = 'canvases-container';
 
     // Generate a canvas for each character

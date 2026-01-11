@@ -8,7 +8,7 @@
     "start_url": "./index.html",
     "icons": [
         {
-            "src": "icon-final.jpg",
+            "src": "icon-text-fix.jpg",
             "sizes": "512x512",
             "type": "image/jpeg"
         }

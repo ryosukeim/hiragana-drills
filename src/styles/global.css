@@ -327,3 +327,11 @@ button,
     user-select: none;
     -webkit-user-select: none;
 }
+
+/* Responsive Writing Screen for Mobile */
+@media (max-width: 600px) {
+    .multi-char-container {
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
