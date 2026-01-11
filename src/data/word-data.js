@@ -711,6 +711,435 @@ export const wordData = [
         imageAsset: 'star.svg',
         kanaFocus: ['ほ', 'し', 'ホ', 'シ']
     },
+    // === NEW WORDS - Animals ===
+    {
+        id: 'word_201',
+        category: 'animals',
+        level: 'beginner',
+        english: 'ant',
+        romaji: 'ari',
+        hiragana: 'あり',
+        katakana: 'アリ',
+        imageAsset: 'ant.svg',
+        kanaFocus: ['あ', 'り', 'ア', 'リ']
+    },
+    {
+        id: 'word_202',
+        category: 'animals',
+        level: 'beginner',
+        english: 'bee',
+        romaji: 'hachi',
+        hiragana: 'はち',
+        katakana: 'ハチ',
+        imageAsset: 'bee.svg',
+        kanaFocus: ['は', 'ち', 'ハ', 'チ']
+    },
+    {
+        id: 'word_203',
+        category: 'animals',
+        level: 'beginner',
+        english: 'turtle',
+        romaji: 'kame',
+        hiragana: 'かめ',
+        katakana: 'カメ',
+        imageAsset: 'turtle.svg',
+        kanaFocus: ['か', 'め', 'カ', 'メ']
+    },
+    {
+        id: 'word_204',
+        category: 'animals',
+        level: 'beginner',
+        english: 'snake',
+        romaji: 'hebi',
+        hiragana: 'へび',
+        katakana: 'ヘビ',
+        imageAsset: 'snake.svg',
+        kanaFocus: ['へ', 'び', 'ヘ', 'ビ']
+    },
+    {
+        id: 'word_205',
+        category: 'animals',
+        level: 'beginner',
+        english: 'frog',
+        romaji: 'kaeru',
+        hiragana: 'かえる',
+        katakana: 'カエル',
+        imageAsset: 'frog.svg',
+        kanaFocus: ['か', 'え', 'る', 'カ', 'エ', 'ル']
+    },
+    {
+        id: 'word_206',
+        category: 'animals',
+        level: 'beginner',
+        english: 'crab',
+        romaji: 'kani',
+        hiragana: 'かに',
+        katakana: 'カニ',
+        imageAsset: 'crab.svg',
+        kanaFocus: ['か', 'に', 'カ', 'ニ']
+    },
+    {
+        id: 'word_207',
+        category: 'animals',
+        level: 'beginner',
+        english: 'octopus',
+        romaji: 'tako',
+        hiragana: 'たこ',
+        katakana: 'タコ',
+        imageAsset: 'octopus.svg',
+        kanaFocus: ['た', 'こ', 'タ', 'コ']
+    },
+    {
+        id: 'word_208',
+        category: 'animals',
+        level: 'beginner',
+        english: 'squid',
+        romaji: 'ika',
+        hiragana: 'いか',
+        katakana: 'イカ',
+        imageAsset: 'squid.svg',
+        kanaFocus: ['い', 'か', 'イ', 'カ']
+    },
+
+    // === NEW WORDS - Food ===
+    {
+        id: 'word_209',
+        category: 'food',
+        level: 'intermediate',
+        english: 'pear',
+        romaji: 'nashi',
+        hiragana: 'なし',
+        katakana: 'ナシ',
+        imageAsset: 'pear.svg',
+        kanaFocus: ['な', 'し', 'ナ', 'シ']
+    },
+    {
+        id: 'word_210',
+        category: 'food',
+        level: 'intermediate',
+        english: 'peach',
+        romaji: 'momo',
+        hiragana: 'もも',
+        katakana: 'モモ',
+        imageAsset: 'peach.svg',
+        kanaFocus: ['も', 'モ']
+    },
+    {
+        id: 'word_211',
+        category: 'food',
+        level: 'beginner',
+        english: 'candy',
+        romaji: 'ame',
+        hiragana: 'あめ',
+        katakana: 'アメ',
+        imageAsset: 'candy.svg',
+        kanaFocus: ['あ', 'め', 'ア', 'メ']
+    },
+    {
+        id: 'word_212',
+        category: 'food',
+        level: 'intermediate',
+        english: 'rice cake',
+        romaji: 'mochi',
+        hiragana: 'もち',
+        katakana: 'モチ',
+        imageAsset: 'rice_cake.svg',
+        kanaFocus: ['も', 'ち', 'モ', 'チ']
+    },
+    {
+        id: 'word_213',
+        category: 'food',
+        level: 'intermediate',
+        english: 'grapes',
+        romaji: 'budou',
+        hiragana: 'ぶどう',
+        katakana: 'ブドウ',
+        imageAsset: 'grapes.svg',
+        kanaFocus: ['ぶ', 'ど', 'う', 'ブ', 'ド', 'ウ']
+    },
+
+    // === NEW WORDS - Nature ===
+    {
+        id: 'word_214',
+        category: 'nature',
+        level: 'beginner',
+        english: 'sea',
+        romaji: 'umi',
+        hiragana: 'うみ',
+        katakana: 'ウミ',
+        imageAsset: 'sea.svg',
+        kanaFocus: ['う', 'み', 'ウ', 'ミ']
+    },
+    {
+        id: 'word_215',
+        category: 'nature',
+        level: 'beginner',
+        english: 'snow',
+        romaji: 'yuki',
+        hiragana: 'ゆき',
+        katakana: 'ユキ',
+        imageAsset: 'snow.svg',
+        kanaFocus: ['ゆ', 'き', 'ユ', 'キ']
+    },
+    {
+        id: 'word_216',
+        category: 'nature',
+        level: 'beginner',
+        english: 'cloud',
+        romaji: 'kumo',
+        hiragana: 'くも',
+        katakana: 'クモ',
+        imageAsset: 'cloud.svg',
+        kanaFocus: ['く', 'も', 'ク', 'モ']
+    },
+    {
+        id: 'word_217',
+        category: 'nature',
+        level: 'beginner',
+        english: 'stone',
+        romaji: 'ishi',
+        hiragana: 'いし',
+        katakana: 'イシ',
+        imageAsset: 'stone.svg',
+        kanaFocus: ['い', 'し', 'イ', 'シ']
+    },
+    {
+        id: 'word_218',
+        category: 'nature',
+        level: 'beginner',
+        english: 'tree',
+        romaji: 'ki',
+        hiragana: 'き',
+        katakana: 'キ',
+        imageAsset: 'tree.svg',
+        kanaFocus: ['き', 'キ']
+    },
+    {
+        id: 'word_219',
+        category: 'nature',
+        level: 'intermediate',
+        english: 'leaf',
+        romaji: 'happa',
+        hiragana: 'はっぱ',
+        katakana: 'ハッパ',
+        imageAsset: 'leaf.svg',
+        kanaFocus: ['は', 'っ', 'ぱ', 'ハ', 'ッ', 'パ']
+    },
+
+    // === NEW WORDS - Body ===
+    {
+        id: 'word_220',
+        category: 'body',
+        level: 'beginner',
+        english: 'face',
+        romaji: 'kao',
+        hiragana: 'かお',
+        katakana: 'カオ',
+        imageAsset: 'face.svg',
+        kanaFocus: ['か', 'お', 'カ', 'オ']
+    },
+    {
+        id: 'word_221',
+        category: 'body',
+        level: 'beginner',
+        english: 'nose',
+        romaji: 'hana',
+        hiragana: 'はな',
+        katakana: 'ハナ',
+        imageAsset: 'nose.svg',
+        kanaFocus: ['は', 'な', 'ハ', 'ナ']
+    },
+    {
+        id: 'word_222',
+        category: 'body',
+        level: 'beginner',
+        english: 'tooth',
+        romaji: 'ha',
+        hiragana: 'は',
+        katakana: 'ハ',
+        imageAsset: 'tooth.svg',
+        kanaFocus: ['は', 'ハ']
+    },
+    {
+        id: 'word_223',
+        category: 'body',
+        level: 'beginner',
+        english: 'hair',
+        romaji: 'kami',
+        hiragana: 'かみ',
+        katakana: 'カミ',
+        imageAsset: 'hair.svg',
+        kanaFocus: ['か', 'み', 'カ', 'ミ']
+    },
+
+    // === NEW WORDS - Everyday ===
+    {
+        id: 'word_224',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'bag',
+        romaji: 'kaban',
+        hiragana: 'かばん',
+        katakana: 'カバン',
+        imageAsset: 'bag.svg',
+        kanaFocus: ['か', 'ば', 'ん', 'カ', 'バ', 'ン']
+    },
+    {
+        id: 'word_225',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'hat',
+        romaji: 'boushi',
+        hiragana: 'ぼうし',
+        katakana: 'ボウシ',
+        imageAsset: 'hat.svg',
+        kanaFocus: ['ぼ', 'う', 'し', 'ボ', 'ウ', 'シ']
+    },
+    {
+        id: 'word_226',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'clock',
+        romaji: 'tokei',
+        hiragana: 'とけい',
+        katakana: 'トケイ',
+        imageAsset: 'clock.svg',
+        kanaFocus: ['と', 'け', 'い', 'ト', 'ケ', 'イ']
+    },
+    {
+        id: 'word_227',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'key',
+        romaji: 'kagi',
+        hiragana: 'かぎ',
+        katakana: 'カギ',
+        imageAsset: 'key.svg',
+        kanaFocus: ['か', 'ぎ', 'カ', 'ギ']
+    },
+    {
+        id: 'word_228',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'glasses',
+        romaji: 'megane',
+        hiragana: 'めがね',
+        katakana: 'メガネ',
+        imageAsset: 'glasses.svg',
+        kanaFocus: ['め', 'が', 'ね', 'メ', 'ガ', 'ネ']
+    },
+    {
+        id: 'word_229',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'clothes',
+        romaji: 'fuku',
+        hiragana: 'ふく',
+        katakana: 'フク',
+        imageAsset: 'clothes.svg',
+        kanaFocus: ['ふ', 'く', 'フ', 'ク']
+    },
+    {
+        id: 'word_230',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'window',
+        romaji: 'mado',
+        hiragana: 'まど',
+        katakana: 'マド',
+        imageAsset: 'window.svg',
+        kanaFocus: ['ま', 'ど', 'マ', 'ド']
+    },
+    {
+        id: 'word_231',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'door',
+        romaji: 'doa',
+        hiragana: 'どあ',
+        katakana: 'ドア',
+        imageAsset: 'door.svg',
+        kanaFocus: ['ど', 'あ', 'ド', 'ア']
+    },
+    {
+        id: 'word_232',
+        category: 'everyday',
+        level: 'beginner',
+        english: 'boat',
+        romaji: 'fune',
+        hiragana: 'ふね',
+        katakana: 'フネ',
+        imageAsset: 'boat.svg',
+        kanaFocus: ['ふ', 'ね', 'フ', 'ネ']
+    },
+    {
+        id: 'word_233',
+        category: 'everyday',
+        level: 'intermediate',
+        english: 'train',
+        romaji: 'densha',
+        hiragana: 'でんしゃ',
+        katakana: 'デンシャ',
+        imageAsset: 'train.svg',
+        kanaFocus: ['で', 'ん', 'し', 'ゃ', 'デ', 'ン', 'シ', 'ャ']
+    },
+
+    // === NEW WORDS - Colors/Numbers ===
+    {
+        id: 'word_234',
+        category: 'colors',
+        level: 'beginner',
+        english: 'black',
+        romaji: 'kuro',
+        hiragana: 'くろ',
+        katakana: 'クロ',
+        imageAsset: 'black.svg',
+        kanaFocus: ['く', 'ろ', 'ク', 'ロ']
+    },
+    {
+        id: 'word_235',
+        category: 'colors',
+        level: 'beginner',
+        english: 'yellow',
+        romaji: 'kiiro',
+        hiragana: 'きいろ',
+        katakana: 'キイロ',
+        imageAsset: 'yellow.svg',
+        kanaFocus: ['き', 'い', 'ろ', 'キ', 'イ', 'ロ']
+    },
+    {
+        id: 'word_236',
+        category: 'colors',
+        level: 'beginner',
+        english: 'green',
+        romaji: 'midori',
+        hiragana: 'みどり',
+        katakana: 'ミドリ',
+        imageAsset: 'green.svg',
+        kanaFocus: ['み', 'ど', 'り', 'ミ', 'ド', 'リ']
+    },
+    {
+        id: 'word_237',
+        category: 'numbers',
+        level: 'beginner',
+        english: 'one',
+        romaji: 'ichi',
+        hiragana: 'いち',
+        katakana: 'イチ',
+        imageAsset: 'one.svg',
+        kanaFocus: ['い', 'ち', 'イ', 'チ']
+    },
+    {
+        id: 'word_238',
+        category: 'numbers',
+        level: 'beginner',
+        english: 'two',
+        romaji: 'ni',
+        hiragana: 'に',
+        katakana: 'ニ',
+        imageAsset: 'two.svg',
+        kanaFocus: ['に', 'ニ']
+    }
 ];
 
 // Filter words by level

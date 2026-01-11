@@ -21,6 +21,15 @@ const icons = {
     'hamster.svg': '🐹',
     'kangaroo.svg': '🦘',
     'tiger.svg': '🐯',
+    // New Animals (Expansion)
+    'ant.svg': '🐜',
+    'bee.svg': '🐝',
+    'turtle.svg': '🐢',
+    'snake.svg': '🐍',
+    'frog.svg': '🐸',
+    'crab.svg': '🦀',
+    'octopus.svg': '🐙',
+    'squid.svg': '🦑',
 
     // Food
     'water.svg': '💧',
@@ -31,6 +40,12 @@ const icons = {
     'chocolate.svg': '🍫',
     'hamburger.svg': '🍔',
     'ice_cream.svg': '🍦', // underscore in filename usually
+    // New Food (Expansion)
+    'pear.svg': '🍐',
+    'peach.svg': '🍑',
+    'candy.svg': '🍬',
+    'rice_cake.svg': '🍡',
+    'grapes.svg': '🍇',
 
     // Nature
     'rain.svg': '☔',
@@ -40,6 +55,13 @@ const icons = {
     'moon.svg': '🌙',
     'mountain.svg': '⛰️',
     'star.svg': '⭐',
+    // New Nature (Expansion)
+    'sea.svg': '🌊',
+    'snow.svg': '❄️',
+    'cloud.svg': '☁️',
+    'stone.svg': '🪨',
+    'tree.svg': '🌳',
+    'leaf.svg': '🍃',
 
     // Body
     'hand.svg': '✋',
@@ -47,6 +69,11 @@ const icons = {
     'ear.svg': '👂',
     'foot.svg': '🦶',
     'mouth.svg': '👄',
+    // New Body (Expansion)
+    'face.svg': '👱',
+    'nose.svg': '👃',
+    'tooth.svg': '🦷',
+    'hair.svg': '💇',
 
     // Everyday
     'book.svg': '📚',
@@ -60,11 +87,28 @@ const icons = {
     'camera.svg': '📷',
     'chair.svg': '🪑',
     'desk.svg': '✍️', // Using writing hand/desk concept
+    // New Everyday (Expansion)
+    'bag.svg': '👜',
+    'hat.svg': '🎩',
+    'clock.svg': '⏰',
+    'key.svg': '🔑',
+    'glasses.svg': '👓',
+    'clothes.svg': '👕',
+    'window.svg': '🪟',
+    'door.svg': '🚪',
+    'boat.svg': '🚢',
+    'train.svg': '🚃',
 
     // Colors
     'red.svg': '🔴',
     'blue.svg': '🔵',
     'white.svg': '⚪',
+    // New Colors/Numbers (Expansion)
+    'black.svg': '⚫',
+    'yellow.svg': '🟡',
+    'green.svg': '🟢',
+    'one.svg': '1️⃣',
+    'two.svg': '2️⃣',
 };
 
 // Simple SVG template
